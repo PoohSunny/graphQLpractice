@@ -7,7 +7,7 @@ var schema = buildSchema(`
   }
 `);
 
-var root = { hello: () => 'Hello world!', yeah: () => "hogehoge" };
+var root = { hello: () => 'Hello world!', yeah: () => "hogehoge", yeah: () => "should be updated!" };
 
 graphql(schema, '{ hello, yeah }', root).then((response) => {
   console.log(response);
