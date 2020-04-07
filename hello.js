@@ -9,7 +9,7 @@ var schema = buildSchema(`
 
 var root = { hello: () => 'Hello world!', yeah: () => "" };
 
-graphql(schema, '{ hello, yeah }', root).then((response) => {
+graphql(schema, '{ yeah, hello }', root).then((response) => {
   console.log(response);
 });
 
